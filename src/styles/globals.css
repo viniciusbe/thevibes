@@ -1,9 +1,18 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #222831;
-    --secondary: #393e46;
-    --colooor: #00adb5;
-    --font-color: #eeeeee;
+    --base-clr: #222831;
+    --base-clr-lt: #222831;
+    --base-clr-ltr: #393e46;
+
+    --primary: #eeeeee;
+    --primary-lt: #eeeeee99;
+    --primary-ltr: #eeeeee66;
+
+    --secondary: #00adb5;
+    --secondary-lt: #00adb5cc;
+    --secondary-ltr: #00adb5aa;
+
+    --header-height: 100px;
   }
 }
 
@@ -20,8 +29,8 @@ body {
 }
 
 body {
-  color: rgb(var(--font-color));
-  background: rgb(var(--primary));
+  color: var(--primary);
+  background: var(--base-clr);
 }
 
 a {
