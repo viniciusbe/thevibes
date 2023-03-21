@@ -1,0 +1,42 @@
+.section {
+  max-height: 600px;
+  min-height: 500px;
+  max-width: 1200px;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section > div {
+  display: flex;
+  gap: 2rem;
+}
+
+.job {
+  flex: 1;
+  margin-top: 1rem;
+  border: 1px solid var(--secondary-ltr);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.job a {
+  color: var(--secondary);
+  font-size: 1.2rem;
+}
+
+.job > p {
+  color: var(--primary-lt);
+  font-weight: 300;
+}
+
+.job ul {
+  list-style-type: circle;
+  color: var(--primary-lt);
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+.job li::marker {
+  color: var(--secondary);
+}
