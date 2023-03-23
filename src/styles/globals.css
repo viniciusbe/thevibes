@@ -2,7 +2,7 @@
   :root {
     --base-clr: #222831;
     --base-clr-lt: #222831aa;
-    --base-clr-ltr: #393e46aa;
+    --base-clr-ltr: #393e46;
 
     --primary: #eeeeee;
     --primary-lt: #eeeeee99;
@@ -13,6 +13,7 @@
     --secondary-ltr: #00adb5aa;
 
     --header-height: 100px;
+    --footer-height: 84px;
   }
 }
 
@@ -42,4 +43,20 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--base-clr);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #393e46;
+  border-radius: 4px;
 }

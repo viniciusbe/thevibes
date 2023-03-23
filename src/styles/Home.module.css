@@ -5,7 +5,6 @@
   align-items: center;
   padding: 0 6rem;
   min-height: 100vh;
-  gap: 5rem;
 }
 
 .main hr {
@@ -20,8 +19,17 @@
   margin-bottom: 0.5rem;
 }
 
+.main section {
+  padding: var(--header-height) 0;
+}
+
 .footer {
-  text-align: center;
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--footer-height);
   font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--primary-lt);
 }

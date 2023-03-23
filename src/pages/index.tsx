@@ -37,7 +37,13 @@ export default function Home() {
       <Social />
 
       <footer className={styles.footer}>
-        Designed and build by Vinícius Bernardes
+        <a
+          href="https://github.com/viniciusbe/thevibes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Designed and build by Vinícius Bernardes
+        </a>
       </footer>
     </>
   )
