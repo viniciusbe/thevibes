@@ -13,6 +13,15 @@ const companies = [
       'Developing a new system focused on user experience, which raised the customer service model from high touch to low touch, reducing implementation time from days to minutes. I had the opportunity to work with Storybook, Jest and React Testing Library',
       'Developing the integration application with e-commerce platforms such as Shopify, Nuvemshop and WBUY. I had the opportunity to implement tests with Cypress and monitoring with Sentry.',
     ],
+    techs: [
+      'Typescript',
+      'React',
+      'Next.js',
+      'Material UI',
+      'Styled Components',
+      'Redux',
+      'AWS',
+    ],
   },
   {
     id: 'planoViver',
@@ -25,24 +34,32 @@ const companies = [
       'Creating and maintaining functionalities for the internally developed ERP',
       'Analyzing processes to detect points of improvement',
     ],
+    techs: ['React', 'Javascript', 'Material UI', 'Styled Components', 'Redux'],
   },
 ]
 
 export default function Jobs() {
   const formatDateString = (stringDate: string) => {
-    return new Date(stringDate).toLocaleDateString()
+    return new Date(stringDate).toLocaleDateString('en-US', {
+      month: 'long',
+      year: 'numeric',
+    })
   }
+
   return (
     <section className={styles.section} id="jobs">
-      <h1>Jobs and Skills</h1>
+      <h1>Experience</h1>
 
       <div>
         {companies.map((company) => (
           <div key={company.id} className={styles.job}>
-            <h2>{company.role}</h2>
-            <a href={company.link} target="_blank" rel="noopener noreferrer">
-              <p>{company.name}</p>
-            </a>
+            <div>
+              <h2>{company.role}</h2>
+              <a href={company.link} target="_blank" rel="noopener noreferrer">
+                {company.name}
+              </a>
+            </div>
+
             <p>
               {formatDateString(company.from)} - {formatDateString(company.to)}
             </p>
@@ -52,6 +69,12 @@ export default function Jobs() {
                 <li key={index}>{activity}</li>
               ))}
             </ul>
+
+            <div className={styles.techs}>
+              {company.techs.map((tech) => (
+                <div key={tech}>{tech}</div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

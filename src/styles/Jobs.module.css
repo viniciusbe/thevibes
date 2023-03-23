@@ -1,8 +1,4 @@
 .section {
-  max-height: 600px;
-  min-height: 500px;
-  max-width: 1200px;
-  padding: 0 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -11,19 +7,33 @@
 .section > div {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.section h1 {
+  text-align: center;
+}
+
+.section h2 {
+  font-weight: 600;
 }
 
 .job {
+  min-width: 450px;
   flex: 1;
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--secondary-ltr);
   padding: 2rem;
   border-radius: 8px;
+  gap: 0.5rem;
 }
 
 .job a {
   color: var(--secondary);
   font-size: 1.2rem;
+  width: fit-content;
 }
 
 .job > p {
@@ -34,9 +44,25 @@
 .job ul {
   list-style-type: circle;
   color: var(--primary-lt);
-  margin-top: 0.5rem;
   margin-left: 1rem;
 }
+
 .job li::marker {
   color: var(--secondary);
+}
+
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.techs div {
+  border: 1px solid var(--secondary-lt);
+  border-radius: 3px;
+
+  padding: 0.5rem;
+  color: var(--primary-lt);
+  font-weight: bold;
 }
