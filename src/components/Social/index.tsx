@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import styles from '@/styles/Social.module.css'
 import ListItem from './ListItem'
 

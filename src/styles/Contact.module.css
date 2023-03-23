@@ -1,0 +1,49 @@
+.section {
+  max-width: 800px;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section p {
+  color: var(--primary-lt);
+}
+
+.section div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+.section a {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.section img {
+  /* this convert from black to var(--primary)  */
+  filter: invert(56%) sepia(68%) saturate(4137%) hue-rotate(149deg)
+    brightness(95%) contrast(101%);
+}
+
+.section span {
+  opacity: 0;
+  color: var(--primary-lt);
+  background-color: var(--base-clr-ltr);
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  top: -40px;
+  right: -60px;
+}
+
+.section img:hover {
+  cursor: pointer;
+}
+
+.showTooltip {
+  opacity: 1 !important;
+  transition: opacity 500ms;
+}

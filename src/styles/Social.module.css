@@ -2,8 +2,9 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  bottom: 20px;
+  bottom: 84px;
   left: 0;
+  border-bottom: 1px solid var(--primary-ltr);
 }
 .sideNav a {
   display: flex;
@@ -16,6 +17,10 @@
 
 .sideNav li + li {
   margin-top: 0.5rem;
+}
+
+.sideNav li:last-child {
+  margin-bottom: 1rem;
 }
 
 .sideNav img {

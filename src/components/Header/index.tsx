@@ -15,7 +15,7 @@ export default function Header() {
         <ol className={styles.list}>
           <NavLink route="about" />
           <NavLink route="jobs" />
-          <NavLink route="work" />
+          {/* <NavLink route="work" /> */}
           <NavLink route="contact" />
         </ol>
       </nav>

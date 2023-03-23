@@ -5,9 +5,9 @@ export default function About() {
     <section className={styles.section} id="about">
       <h1>About me</h1>
       <p>
-        I&apos;m a web developer located in Joinville-SC, south of Brazil. My
-        interest in programming started in 2016 when I had my first contact with
-        the algorithm discipline on an Engineer course.
+        I&apos;m a frontend developer located in Joinville-SC, south of Brazil.
+        My interest in programming started in 2016 when I had my first contact
+        with the algorithm discipline on an Engineer course.
       </p>
       <p>
         Since 2021, I&apos;ve worked for two local companies and now searching
