@@ -1,0 +1,32 @@
+.sideNav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 20px;
+  left: 0;
+}
+.sideNav a {
+  display: flex;
+  padding: 0.7rem 1.5rem;
+}
+
+.sideNav ul {
+  list-style-type: none;
+}
+
+.sideNav li + li {
+  margin-top: 0.5rem;
+}
+
+.sideNav img {
+  /* this convert from black to var(--primary)  */
+  filter: invert(77%) sepia(97%) saturate(1%) hue-rotate(357deg)
+    brightness(101%) contrast(98%);
+}
+
+.sideNav img:hover {
+  /* this convert from black to var(--secondary)  */
+  filter: invert(56%) sepia(68%) saturate(4137%) hue-rotate(149deg)
+    brightness(95%) contrast(101%);
+  transition: filter 100ms;
+}
