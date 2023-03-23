@@ -11,36 +11,46 @@
   color: var(--primary-lt);
 }
 
-.section div {
+.email {
   display: flex;
   align-items: center;
+  width: fit-content;
   gap: 0.5rem;
   position: relative;
 }
-.section a {
+
+.email div {
+  position: relative;
+}
+
+.email a {
   color: var(--secondary);
   font-weight: bold;
 }
 
-.section img {
+.email img {
   /* this convert from black to var(--primary)  */
   filter: invert(56%) sepia(68%) saturate(4137%) hue-rotate(149deg)
     brightness(95%) contrast(101%);
 }
 
-.section span {
+.email span {
+  position: absolute;
+  white-space: nowrap;
   opacity: 0;
+  pointer-events: none;
   color: var(--primary-lt);
-  background-color: var(--base-clr-ltr);
+  background-color: #111;
   padding: 0.5rem;
   border-radius: 4px;
-  position: absolute;
-  top: -40px;
-  right: -60px;
+  left: 50%;
+  bottom: 150%;
+  transform: translate(-50%, 0);
 }
 
-.section img:hover {
+.email img:hover {
   cursor: pointer;
+  pointer-events: all;
 }
 
 .showTooltip {
