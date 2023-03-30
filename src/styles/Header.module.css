@@ -56,6 +56,25 @@
   list-style: none;
 }
 
+/* .menuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .list {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+} */
+
+.menuButton img {
+  filter: invert(56%) sepia(68%) saturate(4137%) hue-rotate(149deg)
+    brightness(95%) contrast(101%);
+}
+
 .list li {
   counter-increment: item;
 }

@@ -1,4 +1,6 @@
 import styles from '@/styles/Header.module.css'
+import Image from 'next/image'
+import Drawer from '../Drawer'
 import NavLink from './NavLink'
 
 export default function Header() {
@@ -18,6 +20,18 @@ export default function Header() {
           {/* <NavLink route="work" /> */}
           <NavLink route="contact" />
         </ol>
+
+        {/* <button className={styles.menuButton}>
+          <Image
+            src="/hamburger-menu.svg"
+            alt="Copy Icon"
+            width={30}
+            height={30}
+            priority
+          />
+        </button> */}
+
+        {/* <Drawer /> */}
       </nav>
     </header>
   )

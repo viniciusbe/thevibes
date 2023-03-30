@@ -1,19 +1,19 @@
+import { useHover } from '@/hooks/useHover'
 import styles from '@/styles/Contact.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Contact() {
-  const [showTooltip, setShowTooltip] = useState(false)
   const [isCopied, setIsCopied] = useState(false)
+
+  const onMouseOut = () => {
+    setIsCopied(false)
+  }
+  const [hoverRef, isHovered] = useHover<HTMLDivElement>(onMouseOut)
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('contact@viniciusbernardes.dev')
     setIsCopied(true)
-  }
-
-  const handleMouseOut = () => {
-    setShowTooltip(false)
-    setIsCopied(false)
   }
 
   return (
@@ -31,18 +31,15 @@ export default function Contact() {
         <a href="mailto:contact@viniciusbernardes.dev">
           contact@viniciusbernardes.dev
         </a>
-        <div>
+        <div ref={hoverRef} onClick={handleCopyEmail}>
           <Image
-            onMouseOver={() => setShowTooltip(true)}
-            onMouseOut={handleMouseOut}
             src="/copyIcon.svg"
             alt="Copy Icon"
             width={25}
             height={25}
             priority
-            onClick={handleCopyEmail}
           />
-          <span className={showTooltip ? styles.showTooltip : ''}>
+          <span className={isHovered ? styles.showTooltip : ''}>
             {isCopied ? 'Copied to clipboard' : 'Copy to clipboard'}
           </span>
         </div>
