@@ -1,9 +1,11 @@
+import useMenuContext from '@/hooks/useMenuContext'
 import styles from '@/styles/Header.module.css'
 import Image from 'next/image'
-import Drawer from '../Drawer'
 import NavLink from './NavLink'
 
 export default function Header() {
+  const { toggleMenu } = useMenuContext()
+
   return (
     <header className={styles.header}>
       <nav>
@@ -21,7 +23,7 @@ export default function Header() {
           <NavLink route="contact" />
         </ol>
 
-        {/* <button className={styles.menuButton}>
+        <button className={styles.menuButton} onClick={toggleMenu}>
           <Image
             src="/hamburger-menu.svg"
             alt="Copy Icon"
@@ -29,9 +31,7 @@ export default function Header() {
             height={30}
             priority
           />
-        </button> */}
-
-        {/* <Drawer /> */}
+        </button>
       </nav>
     </header>
   )

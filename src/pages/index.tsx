@@ -1,16 +1,21 @@
 import Head from 'next/head'
 
 import styles from '@/styles/Home.module.css'
+
 import Presentation from '@/components/Presentation'
 import Header from '@/components/Header'
 import About from '@/components/About'
 import Jobs from '@/components/Jobs'
 import Contact from '@/components/Contact'
 import Social from '@/components/Social'
+import Drawer from '@/components/Drawer'
+import useMenuContext from '@/hooks/useMenuContext'
 
 export default function Home() {
+  const { isMenuOpen } = useMenuContext()
+
   return (
-    <>
+    <div className={isMenuOpen ? styles.disableScroll : ''}>
       <Head>
         <title>Vinícius Bernardes</title>
         <meta
@@ -22,6 +27,8 @@ export default function Home() {
       </Head>
 
       <Header />
+
+      <Drawer />
 
       <main className={styles.main}>
         <Presentation />
@@ -45,6 +52,6 @@ export default function Home() {
           Designed and build by Vinícius Bernardes
         </a>
       </footer>
-    </>
+    </div>
   )
 }
