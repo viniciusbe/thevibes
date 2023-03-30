@@ -21,7 +21,7 @@ export default function Header() {
           <NavLink route="contact" />
         </ol>
 
-        <button className={styles.menuButton}>
+        {/* <button className={styles.menuButton}>
           <Image
             src="/hamburger-menu.svg"
             alt="Copy Icon"
@@ -29,9 +29,9 @@ export default function Header() {
             height={30}
             priority
           />
-        </button>
+        </button> */}
 
-        <Drawer />
+        {/* <Drawer /> */}
       </nav>
     </header>
   )
