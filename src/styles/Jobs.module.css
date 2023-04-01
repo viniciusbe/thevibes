@@ -66,3 +66,9 @@
   color: var(--primary-lt);
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .job {
+    min-width: 200px;
+  }
+}

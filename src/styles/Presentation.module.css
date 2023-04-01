@@ -22,3 +22,9 @@
   color: var(--primary-lt);
   margin-top: 1rem;
 }
+
+@media (max-width: 768px) {
+  .section {
+    margin: 0;
+  }
+}

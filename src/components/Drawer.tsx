@@ -1,6 +1,7 @@
 import useMenuContext from '@/hooks/useMenuContext'
 import styles from '@/styles/Drawer.module.css'
 import Image from 'next/image'
+import NavList from './Nav/NavList'
 
 export default function Drawer() {
   const { isMenuOpen, toggleMenu } = useMenuContext()
@@ -19,6 +20,8 @@ export default function Drawer() {
             priority
           />
         </button>
+
+        <NavList isMenu />
       </aside>
     </div>
   )

@@ -35,3 +35,9 @@
     brightness(95%) contrast(101%);
   transition: filter 100ms;
 }
+
+@media (max-width: 768px) {
+  .sideNav {
+    display: none;
+  }
+}

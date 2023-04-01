@@ -1,7 +1,9 @@
+import Image from 'next/image'
+
 import useMenuContext from '@/hooks/useMenuContext'
 import styles from '@/styles/Header.module.css'
-import Image from 'next/image'
-import NavLink from './NavLink'
+
+import NavList from '../Nav/NavList'
 
 export default function Header() {
   const { toggleMenu } = useMenuContext()
@@ -16,12 +18,7 @@ export default function Header() {
           <div />
         </div>
 
-        <ol className={styles.list}>
-          <NavLink route="about" />
-          <NavLink route="jobs" />
-          {/* <NavLink route="work" /> */}
-          <NavLink route="contact" />
-        </ol>
+        <NavList />
 
         <button className={styles.menuButton} onClick={toggleMenu}>
           <Image

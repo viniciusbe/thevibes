@@ -27,6 +27,12 @@
   padding: var(--header-height) 0;
 }
 
+@media (max-width: 768px) {
+  .main {
+    padding: 0 2rem;
+  }
+}
+
 .footer {
   display: flex;
   align-items: center;

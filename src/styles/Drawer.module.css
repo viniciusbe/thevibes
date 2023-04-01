@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
 
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
@@ -16,11 +16,11 @@
 }
 
 .aside {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 300px;
+  width: 250px;
   max-height: 100vh;
   min-height: 100vh;
 
@@ -29,7 +29,7 @@
   top: 0;
 
   z-index: 2;
-  background: #000;
+  background-color: var(--base-clr);
 }
 
 .closeButton img {
