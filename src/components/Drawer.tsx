@@ -1,6 +1,9 @@
+import { useRef } from 'react'
+import Image from 'next/image'
+
 import useMenuContext from '@/hooks/useMenuContext'
 import styles from '@/styles/Drawer.module.css'
-import Image from 'next/image'
+import useOnClickOutside from '@/hooks/useOnClickOutside'
 import NavList from './Nav/NavList'
 
 export default function Drawer() {
@@ -8,9 +11,16 @@ export default function Drawer() {
 
   const visibleClass = isMenuOpen ? styles.isOpen : ''
 
+  const ref = useRef<HTMLElement | null>(null)
+
+  const closeDrawer = () => {
+    isMenuOpen && toggleMenu()
+  }
+  useOnClickOutside(ref, closeDrawer)
+
   return (
     <div className={`${styles.backdrop} ${visibleClass}`}>
-      <aside className={styles.aside}>
+      <aside className={styles.aside} ref={ref}>
         <button className={styles.closeButton} onClick={toggleMenu}>
           <Image
             src="/close.svg"
