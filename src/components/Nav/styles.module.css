@@ -25,6 +25,7 @@
 .list li:hover {
   color: var(--secondary);
   transition: color 100ms;
+  cursor: pointer;
 }
 
 .list li::before {

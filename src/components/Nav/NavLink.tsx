@@ -1,5 +1,4 @@
 import useMenuContext from '@/hooks/useMenuContext'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 interface NavLinkProps {
