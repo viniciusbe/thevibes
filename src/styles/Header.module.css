@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: var(--header-height);
   padding: 0 2rem;
 

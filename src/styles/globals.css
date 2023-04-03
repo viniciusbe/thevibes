@@ -17,6 +17,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  :root {
+    --header-height: 80px;
+    --footer-height: 64px;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -54,9 +61,9 @@ button {
   }
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 /* Track */
