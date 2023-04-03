@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: var(--header-height);
   padding: 0 2rem;
 
@@ -48,7 +48,6 @@
 
 .list {
   display: flex;
-  flex-direction: row;
   width: fit-content;
   gap: 2rem;
 
@@ -56,7 +55,7 @@
   list-style: none;
 }
 
-/* .menuButton {
+.menuButton {
   display: none;
 }
 
@@ -68,7 +67,7 @@
   .menuButton {
     display: block;
   }
-} */
+}
 
 .menuButton img {
   filter: invert(56%) sepia(68%) saturate(4137%) hue-rotate(149deg)

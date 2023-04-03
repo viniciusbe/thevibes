@@ -1,3 +1,7 @@
+.disableScroll {
+  overflow: hidden;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -21,6 +25,22 @@
 
 .main section {
   padding: var(--header-height) 0;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 0 2rem 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0 2rem;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+  }
 }
 
 .footer {

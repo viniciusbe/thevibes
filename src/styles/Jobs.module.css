@@ -6,8 +6,10 @@
 
 .section > div {
   display: flex;
-  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
   margin-top: 1rem;
 }
 
@@ -20,8 +22,8 @@
 }
 
 .job {
-  min-width: 450px;
   flex: 1;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--secondary-ltr);
@@ -53,7 +55,8 @@
 
 .techs {
   display: flex;
-  flex-wrap: wrap;
+  overflow: auto;
+
   gap: 5px;
   margin-top: 0.5rem;
 }
@@ -62,7 +65,16 @@
   border: 1px solid var(--secondary-lt);
   border-radius: 3px;
 
+  white-space: nowrap;
+
   padding: 0.5rem;
   color: var(--primary-lt);
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .job {
+    width: 90vw;
+    padding: 1.5rem;
+  }
 }
